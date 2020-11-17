@@ -13,20 +13,20 @@ bool Practice::sortDescending(int & first, int & second, int & third)
     first = second;
     second = temp;
   }
-  if( first < third )
-  {
-    int temp = first;
-    first = third;
-    third = temp;
-  }
   if( second < third )
   {
     int temp = second;
     second = third;
     third = temp;
   }
+  if( first < second )
+  {
+    int temp = first;
+    first = second;
+    second = temp;
+  }
 
-  if((first > second) && (second > third))
+  if((first >= second) && (second >= third))
   {
     return true;
   }
